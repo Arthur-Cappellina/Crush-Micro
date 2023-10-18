@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/open_t.js"></script>
+    <link rel="stylesheet" href="css/nuts_t.css">
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+    <header>
+        <h1>Crush les tournois</h1>
+        <nav class="nav">
+            <ul>
+                <a href="open.html">Ranges cash game</a>
+                <a href="open_t.html">Ranges tournoi</a>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <nav class="inner-navigation">
+            <ul>
+                <li class="top-selected" id="open">Open</li>
+                <li id="iso">Isolation</li>
+                <li id="3-bet">3-Bet</li>
+                <li id="defense-bb">Défense de bb</li>
+                <li id="defense-3bet">Défense vs 3-bet</li>
+                <li id="squeeze">Squeeze</li>
+            </ul>
+        </nav>
+        <nav class="inner-navigation-stack">
+            <ul>
+                <li class="selected-stack" id="100">100BB</li>
+                <li id="80">80BB</li>
+                <li id="60">60BB</li>
+                <li id="50">50BB</li>
+                <li id="40">40BB</li>
+                <li id="35">35BB</li>
+                <li id="30">30BB</li>
+                <li id="25">25BB</li>
+                <li id="20">20BB</li>
+                <li id="17">17BB</li>
+                <li id="14">14BB</li>
+                <li id="12">12BB</li>
+                <li id="10">10BB</li>
+                <li id="9">9BB</li>
+                <li id="8">8BB</li>
+                <li id="7">7BB</li>
+                <li id="6">6BB</li>
+                <li id="5">5BB</li>
+                <li id="4">4BB</li>
+                <li id="3">3BB</li>
+                <li id="2">2BB</li>
+            </ul>
+        </nav>
+        <div class="content-inner">
+            <div class="content-left">
+                <img src="img/tournoi/open/LJ/100.PNG" alt="" class="range-container">
+            </div>
+            <div class="content-right">
+                <div class="open current-mode">
+                    <ul>
+                        <li class="selected" id="LJ">Low-Jack</li>
+                        <li id="HJ">Hi-Jack</li>
+                        <li id="CO">Cutoff</li>
+                        <li id="BTN">Bouton</li>
+                        <li id="SB">Small blind </li>
+                    </ul>
+                </div>
+                <div class="3-bet">
+                    <h1>Choisissez la configuration de 3-bet</h1>
+                    <ul>
+                        <li class="selected" id="lj-hj"><strong>Hi-Jack</strong> 3Bet Low-Jack</li>
+                        <li id="lj-co"><strong>Cutoff</strong> 3Bet Low-Jack</li>
+                        <li id="hj-co"><strong>Cutoff</strong> 3Bet Hi-Jack</li>
+                        <li id="lj-btn"><strong>Bouton</strong> 3Bet Low-Jack</li>
+                        <li id="hj-btn"><strong>Bouton</strong> 3Bet Hi-Jack</li>
+                        <li id="co-btn"><strong>Bouton</strong> 3Bet Cutoff</li>
+                        <li id="lj-sb"><strong>Small blind</strong> 3Bet Low-Jack</li>
+                        <li id="hj-sb"><strong>Small blind</strong> 3Bet Hi-Jack</li>
+                        <li id="co-sb"><strong>Small blind</strong> 3Bet Cutoff</li>
+                        <li id="btn-sb"><strong>Small blind</strong> 3Bet Bouton</li>
+                    </ul>
+                </div>
+                <div class="iso">
+                    <h1>Choisissez votre position</h1>
+                    <ul>
+                        <li class="selected" id="hj">Hi-Jack</li>
+                        <li id="co">Cutoff</li>
+                        <li id="btn">Bouton</li>
+                        <li id="sb">Small blind </li>
+                        <li id="sb">Big blind </li>
+                        <li id="bb-sb">Big blind vs Small blind</li>
+                    </ul>
+                </div>
+                <div class="defense-bb">
+                    <h1>Choisissez la position de l'opener</h1>
+                    <ul>
+                        <li class="selected" id="lj">Low-Jack</li>
+                        <li id="hj">Hi-Jack</li>
+                        <li id="co">Cutoff</li>
+                        <li id="btn">Bouton</li>
+                        <li id="sb">Small blind </li>
+                    </ul>
+                </div>
+                <div class="defense-3bet">
+                    <h1>Choisissez la configuration du défense de 3-bet</h1>
+                    <ul>
+                        <li class="selected" id="lj-bb">Blindes 3-Bet Low-Jack</li>
+                        <li id="hj-bb">Blindes 3-Bet Hi-Jack</li>
+                        <li id="co-bb">Blindes 3-Bet Cutoff</li>
+                        <li id="btn-bb">Blindes 3-Bet Bouton</li>
+                        <li id="sb-bb">BB 3-Bet Small blind</li>
+                        <li id="lj-btn">Bouton 3-Bet Low-Jack</li>
+                        <li id="hj-btn">Bouton 3-Bet Hi-Jack</li>
+                        <li id="co-btn">Bouton 3-Bet Cutoff</li>
+                        <li id="lj-co">Cutoff 3-Bet Low-Jack</li>
+                        <li id="hj-co">Cutoff 3-Bet Hi-Jack</li>
+                        <li id="lj-hj">Hi-Jack 3-Bet Low-Jack</li>
+                    </ul>
+                </div>
+                <div class="squeeze">
+                    <h1>Choisissez la configuration du squeeze</h1>
+                    <ul>
+                        <li class="selected" id="bb-lj-btn">BB vs Low-Jack + Bouton</li>
+                        <li id="bb-hj-btn">BB vs Hi-Jack + Bouton</li>
+                        <li id="bb-co-btn">BB vs Cutoff + Bouton</li>
+                        <li id="bb-sb-btn">BB vs Bouton + Small Blind</li>
+                        <li id="sb-lj-btn">SB vs Low-Jack + Bouton</li>
+                        <li id="sb-hj-btn">SB vs Hi-Jack + Bouton</li>
+                        <li id="sb-co-btn">SB vs Cutoff + Bouton</li>
+                        <li id="btn">Bouton vs Autres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
