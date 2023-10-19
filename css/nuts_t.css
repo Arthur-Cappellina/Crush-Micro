@@ -19,7 +19,7 @@ header h1 {
 }
 
 nav, .content-inner{
-    width: 80%;
+    width: 95%;
     margin: auto;
 }
 
@@ -48,7 +48,6 @@ nav ul li:hover {
 }
 
 .inner-navigation-stack ul {
-    width: 60%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -60,12 +59,13 @@ nav ul li:hover {
 
 .content-inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: left;
 }
 
 .content-left {
     max-height: 70vh;
-    max-width: 90%;
+    max-width: 70%;
 }
 
 img {
@@ -76,14 +76,14 @@ img {
     padding: 0;
     display: flex;
     list-style: none;
-    flex-flow: row wrap;
+    flex-flow: column;
     width: 100%;
     column-count: 7;
 }
 
 .content-right{
     margin-left: 20px;
-    min-width: max-content;
+    width: 25%;
 }
 
 .content-right ul li {
@@ -118,7 +118,8 @@ img {
 }
 
 .content-right div.current-mode {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .range-container {
@@ -131,6 +132,6 @@ img {
     border-radius: 5px;
 }
 
-.content-right {
-    margin-left: 0;
+.hidden {
+    display: none;
 }

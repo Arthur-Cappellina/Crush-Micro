@@ -11,7 +11,6 @@ $(document).ready(function() {
     $(".inner-navigation > ul > li").click(function() {
         $(".inner-navigation .top-selected").removeClass("top-selected")
         $(this).addClass("top-selected")
-        console.log($(this))
         current_mode = $(this)[0].id
         changeMode()
     })
@@ -24,12 +23,56 @@ $(document).ready(function() {
     })
 
     function changeMode() {
+        $(".selected-stack").removeClass("selected-stack")
+        $(".inner-navigation-stack ul li").each(function(){
+            $(this).removeClass("hidden")
+        })
+        let hasPassed = false;
+        if(current_mode == "open"){
+            $(".inner-navigation-stack ul li").each(function(){
+                if(!hasPassed){
+                    $(this).addClass("selected-stack")
+                    current_stack = $(this)[0].id
+                    hasPassed = true
+                }
+            })
+        }
+        if(current_mode == "3-betxopen" || current_mode == "defense-bb"){
+            $(".inner-navigation-stack ul li").each(function(){
+                if(parseInt($(this)[0].id) < 6){
+                    $(this).addClass("hidden")
+                }
+                else{
+                    if(!hasPassed){
+                        $(this).addClass("selected-stack")
+                        current_stack = $(this)[0].id
+                        hasPassed = true
+                    }
+                    $(this).removeClass("hidden")
+                }
+            })
+        } else if(current_mode == "3-betxshove"){
+            $(".inner-navigation-stack ul li").each(function(){
+                if(parseInt($(this)[0].id) >= 6){
+                    $(this).addClass("hidden")
+                }
+                else{
+                    if(!hasPassed){
+                        $(this).addClass("selected-stack")
+                        current_stack = $(this)[0].id
+                        hasPassed = true
+                    }
+                    $(this).removeClass("hidden")
+                }
+            })
+        } 
         $(".current-mode").removeClass("current-mode")
         $("." + current_mode).addClass("current-mode")
-        $(".content-left > img").attr("src", "img/cash/" + $("." + current_mode + " > ul > li")[0].id + "-" + current_mode + ".png")
+        $(".content-left > img").attr("src", "img/tournoi/" + current_mode + "/" + $("." + $(".current-mode")[0].className.split(" ")[0] + " .selected")[0].id + "/" + current_stack + ".png")
     }
 
     function loadImage(){
-        $(".content-left > img").attr("src", "img/tournoi/" + current_mode + "/" + $(".selected")[0].id + "/" + current_stack + ".png")
+        console.log(current_stack)
+        $(".content-left > img").attr("src", "img/tournoi/" + current_mode + "/" +$("." + $(".current-mode")[0].className.split(" ")[0] + " .selected")[0].id + "/" + current_stack + ".png")
     }
 })
