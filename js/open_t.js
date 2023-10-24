@@ -37,7 +37,7 @@ $(document).ready(function() {
                 }
             })
         }
-        if(current_mode == "3-betxopen" || current_mode == "defense-bb"){
+        if(current_mode == "3-betxopen" || current_mode == "defense-bb" || current_mode == "defense-3-bet"){
             $(".inner-navigation-stack ul li").each(function(){
                 if(parseInt($(this)[0].id) < 6){
                     $(this).addClass("hidden")
